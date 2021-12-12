@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">FirstMyAppTest</string>
     <string name="button">Button</string>
+    <string name="create_a_new_account">Create A New Account ?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
 </resources>
