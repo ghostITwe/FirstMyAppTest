@@ -13,7 +13,9 @@
         <item name="android:statusBarColor" tools:targetApi="l">@color/statusBar</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="android:windowBackground">@drawable/splashscreen</item>
+    <style name="SplashTheme" parent="Theme.AppCompat.Light">
+        <item name="android:windowBackground">@color/splashScreenColor</item>
+        <item name="android:background">@drawable/splashscreen</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
 </resources>

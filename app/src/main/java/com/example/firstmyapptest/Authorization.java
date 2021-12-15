@@ -34,8 +34,7 @@ import java.util.Set;
 
 public class Authorization extends AppCompatActivity {
 
-    private Button signInButton;
-    private TextView createNewAccount;
+    private Button loginButton, registrationButton;
     private EditText loginText, passwordText;
 
     @Override
@@ -43,18 +42,18 @@ public class Authorization extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authorization);
 
-        createNewAccount = findViewById(R.id.createNewAccount);
-        signInButton = findViewById(R.id.sign_in);
-        loginText = findViewById(R.id.login);
+        registrationButton = findViewById(R.id.RegistrationButton);
+        loginButton = findViewById(R.id.LoginButton);
+        loginText = findViewById(R.id.email);
         passwordText = findViewById(R.id.password);
 
 
-        createNewAccount.setOnClickListener(v -> {
+        registrationButton.setOnClickListener(v -> {
             startActivity(new Intent(this, Registration.class));
             finish();
         });
 
-        signInButton.setOnClickListener(v -> {
+        loginButton.setOnClickListener(v -> {
             try {
                 SignIn(loginText.getText().toString(), passwordText.getText().toString());
             } catch (IOException | JSONException e) {
@@ -65,24 +64,6 @@ public class Authorization extends AppCompatActivity {
 
     public void SignIn(String login, String password) throws IOException, JSONException {
         if (!login.trim().equals("") && !password.trim().equals("")) {
-//            JSONObject data = new JSONObject();
-//            data.put("email", login);
-//            data.put("password", password);
-//
-//            URL urlApi = new URL("https://reqres.in/api/login");
-//            HttpURLConnection connection = (HttpURLConnection) urlApi.openConnection();
-//            connection.setRequestProperty("Content-Type", "application/json");
-//            connection.setRequestProperty("Accept", "application/json");
-//            connection.setRequestMethod("POST");
-//            connection.setDoOutput(true);
-//            connection.connect();
-//
-//            OutputStream os = connection.getOutputStream();
-//            OutputStreamWriter osw = new OutputStreamWriter(os, "UTF-8");
-//
-//            osw.write(data.toString());
-//            osw.flush();
-//            osw.close();
             startActivity(new Intent(this, MainActivity.class));
             finish();
 

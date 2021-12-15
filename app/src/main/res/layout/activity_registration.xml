@@ -3,186 +3,133 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".Registration"
-    android:background="@drawable/auth_background">
+    android:background="@color/splashScreenColor">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/auth_gradient"
-        android:gravity="center|bottom"
+        android:layout_height="match_parent"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="50dp"
-            android:orientation="horizontal"
-            android:background="@drawable/input_border"
-            android:gravity="center">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                >
-
-                <ImageView
-                    android:id="@+id/auth_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/auth" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="50dp"
-                android:background="#E2E2E2" />
-
-            <EditText
-                android:id="@+id/login"
+            <ImageView
+                android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@null"
-                android:hint="Введите логин"
-                android:inputType="textPersonName"
-                android:paddingHorizontal="10dp" />
+                android:layout_marginHorizontal="15dp"
+                app:srcCompat="@drawable/splashscreen" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="50dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:background="@drawable/input_border"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:gravity="center">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="13dp"
-                >
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/border_input"
+                android:hint="Имя"
+                android:textColor="@color/TextColorHint"
+                android:textColorHint="@color/TextColorHint"
+                android:inputType="textPersonName"
+                android:padding="10dp" />
 
-                <ImageView
-                    android:id="@+id/email_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/email" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="50dp"
-                android:background="#E2E2E2" />
+            <EditText
+                android:id="@+id/surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border_input"
+                android:hint="Фамилия"
+                android:textColor="@color/TextColorHint"
+                android:textColorHint="@color/TextColorHint"
+                android:inputType="textPersonName"
+                android:padding="10dp" />
 
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@null"
-                android:hint="Введите почту"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border_input"
+                android:hint="E-mail"
+                android:textColor="@color/TextColorHint"
+                android:textColorHint="@color/TextColorHint"
                 android:inputType="textEmailAddress"
-                android:minHeight="48dp"
-                android:paddingHorizontal="10dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="50dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:background="@drawable/input_border"
-            android:gravity="center">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                >
-
-                <ImageView
-                    android:id="@+id/password_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/password" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="50dp"
-                android:background="#E2E2E2" />
+                android:padding="10dp" />
 
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@null"
-                android:hint="Введите пароль"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:paddingHorizontal="10dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="50dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:background="@drawable/input_border"
-            android:gravity="center">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                >
-
-                <ImageView
-                    android:id="@+id/password_verify_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/password" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="50dp"
-                android:background="#E2E2E2" />
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border_input"
+                android:hint="Пароль"
+                android:textColor="@color/TextColorHint"
+                android:textColorHint="@color/TextColorHint"
+                android:inputType="textPassword"
+                android:padding="10dp" />
 
             <EditText
                 android:id="@+id/password_verify"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@null"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border_input"
                 android:hint="Повторите пароль"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:paddingHorizontal="10dp" />
+                android:textColor="@color/TextColorHint"
+                android:textColorHint="@color/TextColorHint"
+                android:inputType="textPassword"
+                android:padding="10dp" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/sign_in"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="#FF4254BC"
-            android:textColor="@color/white"
-            android:text="@string/sign_up"
-            android:textSize="16sp" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/RegistrationButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/login_button"
+                android:text="Зарегистрироваться"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/LoginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border_input"
+                android:text="У меня уже есть аккаунт"
+                android:textColor="@color/LoginButton"
+                android:textSize="14dp" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
