@@ -4,17 +4,219 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/splashScreenColor"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/image_cover"
+                    android:scaleType="centerCrop"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/button9"
+                        android:layout_width="128dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="70dp"
+                        android:background="@drawable/login_button"
+                        android:text="Смотреть"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="#1AC4C4C4"
+                android:layout_marginVertical="10dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="В тренде"
+                    android:paddingVertical="10dp"
+                    android:textColor="@color/LoginButton"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Новое"
+                    android:textStyle="bold"
+                    android:paddingVertical="10dp"
+                    android:textColor="@color/LoginButton"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Для вас"
+                    android:textColor="@color/LoginButton"
+                    android:paddingVertical="10dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="SpeakableTextPresentCheck">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/film1" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/film2" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/film3" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Вы смотрели"
+                    android:textColor="@color/LoginButton"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="16dp"/>
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/film4"
+                    android:paddingBottom="70dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello Splash Activity"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/BottomNavigation">
+
+
+            <Button
+                android:id="@+id/imageButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_vector"
+                android:text="Главное"
+                android:textAllCaps="false"
+                android:textColor="@color/BottomNavigationText"
+                android:background="@null"
+                android:paddingVertical="10dp"/>
+
+            <Button
+                android:id="@+id/imageButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Подборка"
+                android:textAllCaps="false"
+                android:textColor="@color/BottomNavigationText"
+                android:drawableTop="@drawable/ic_vector_1"
+                android:background="@null"
+                android:paddingVertical="10dp"/>
+
+            <Button
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_vector_2"
+                android:textColor="@color/BottomNavigationText"
+                android:text="Коллекции"
+                android:textAllCaps="false"
+                android:background="@null"
+                android:paddingVertical="10dp"/>
+
+            <Button
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_vector_3"
+                android:textColor="@color/BottomNavigationText"
+                android:text="Профиль"
+                android:textAllCaps="false"
+                android:background="@null"
+                android:paddingVertical="10dp"/>
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

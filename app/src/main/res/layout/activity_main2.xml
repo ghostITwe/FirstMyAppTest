@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/splashScreenColor"
-    tools:context=".Authorization">
+    tools:context=".MainActivity2">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,49 +19,44 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:orientation="vertical"
+            android:gravity="center"
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                app:srcCompat="@drawable/splashscreen" />
+                app:srcCompat="@drawable/launch_background" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_weight="1"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_weight="1">
 
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/editTextTextPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/border_input"
-                android:hint="E-mail"
-                android:textColor="@color/TextColorHint"
-                android:textColorHint="@color/TextColorHint"
-                android:inputType="textEmailAddress"
-                android:padding="10dp" />
+                android:hint="Name" />
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/editTextTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="15dp"
+                android:padding="10dp"
                 android:background="@drawable/border_input"
-                android:textColor="@color/TextColorHint"
                 android:hint="Пароль"
-                android:textColorHint="@color/TextColorHint"
-                android:inputType="textPassword"
-                android:padding="10dp" />
+                android:inputType="textPassword" />
         </LinearLayout>
 
         <LinearLayout
@@ -72,25 +67,26 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/LoginButton"
+                android:id="@+id/orange"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
+                android:text="Button"
+                android:textAllCaps="false"
                 android:background="@drawable/login_button"
-                android:text="Войти"
-                android:textColor="@color/white" />
+                android:layout_marginHorizontal="10dp"
+                />
 
             <Button
-                android:id="@+id/RegistrationButton"
+                android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
+                android:textAllCaps="false"
+                android:text="Button"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/border_input"
-                android:text="Регистрация"
                 android:textColor="@color/LoginButton"
-                android:textSize="14dp" />
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/border_input"
+                />
         </LinearLayout>
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
